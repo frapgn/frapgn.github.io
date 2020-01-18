@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+}
+
+body {
+    padding: 10px;
+    background-color: #181818;
+}
+
+.row {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item-box {
+    position: relative;
+    display: inline-block;
+    height: 300px;
+    width: 250px;
+    background-color: #b4b4b4;
+    border-radius: 5px;
+}
+
+.item-box:hover {
+    background-color: #494949;
+}
+
+.item-box img {
+    /* position: absolute;
+    top: 40px;
+    left:23px; */
+    padding: 50px 25px;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+/*  CI HO RINUNCIATO, USO UN ALTRO MODO */
+
+/*  HO PROVATO ANCHE LO SOLUZIONE DEL CAMBIO
+    COLORE DELL' :after MA NULLA */
+
+/* .w-heart {
+    position: absolute;
+    bottom: 15px;
+    left: 110px;
+}
+
+.r-heart {
+    position: absolute;
+    bottom: 15px;
+    left: 110px;
+}
+
+.w-heart:after {
+    font-size: 30px;
+    content: "\02665";
+    color: white;
+}
+
+.r-heart:after {
+    font-size: 30px;
+    content: "\02665";
+    color: red;
+}
+
+.w-heart:hover {
+    cursor: pointer;
+} */
+
+
+
+
+.heart {
+    position: absolute;
+    bottom: 15px;
+    left: 110px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0);
+}
+
+.item-box:hover .heart{
+    color: white;
+}
+
+.item-box:hover .heart:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.container-discount {
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 22px;
+    width: 50px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.container-discount-red {
+    background-color: #c78b8b;
+}
+
+.container-discount-blue {
+    background-color: #b2befb;
+}
+
+.container-discount-green {
+    background-color: #aacfa5;
+}
+
+.discount-text {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 600;
+    /* position: absolute;
+    top: 7px;
+    right: 3px; */
+}
