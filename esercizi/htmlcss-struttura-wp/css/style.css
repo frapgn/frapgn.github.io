@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+body {
+    background-color: #897962;
+    background-image: url("../img/default-pattern.png");
+    background-repeat: repeat;
+}
+
+.container {
+    margin: 20px auto;
+    width: 90%;
+}
+
+h1, h2, h3, a {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    border: 3px solid white;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+p, li {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+ul{
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+li {
+    line-height: 30px;
+    list-style-type: none;
+}
+
+/********** HEADER **********/
+header {
+    height: 250px;
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 3px 3px 0 0;
+}
+
+header img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.titles-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.fa-mountain {
+    font-size: 30px;
+    transform: translate(0,10%);
+}
+
+/********** NAVBAR **********/
+nav {
+    height: 50px;
+    background-color: #504741;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 0 0 3px 3px;
+}
+
+.menu-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+}
+
+.menu-item {
+    float: left;
+    padding: 0 10px;
+    height: 100%;
+    border-right: 1px solid #42352c;
+    line-height: 50px;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+    background-color: #6a5f57;
+}
+
+.menu-item:last-child {
+    border-right: none;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-item a:visited {
+    color: #fff;
+}
+
+/********** SIDEBAR LEFT **********/
+.sidebar-left {
+    width: 20%;
+    float: left;
+}
+
+.sidebar-left div {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+/********** MAIN **********/
+main {
+    width: calc(60% - 40px);
+    background-color: #fff;
+    float: left;
+    margin: 0 20px 20px;
+    border-radius: 3px;
+}
+
+main div {
+    padding: 20px;
+    border-bottom: 1px solid #504741;
+}
+
+main div:last-child {
+    border-bottom: none;
+}
+
+main h2 {
+    margin-bottom: 10px;
+}
+
+/********** SIDEBAR RIGHT **********/
+.sidebar-right {
+    width: 20%;
+    float: left;
+}
+
+.sidebar-right div {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.sidebar-right input {
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.sidebar-right input[type="search"] {
+    margin-right: 10px;
+    width: 70%;
+    color: #504741;
+    border: 1px solid #c3c3c3;
+}
+
+.sidebar-right input[type="submit"] {
+    width: calc(30% - 14px);
+    border: 1px solid #3d3632;
+    color: #fff;
+    background-color: #504741;
+    font-weight: bold;
+}
+
+/********** FOOTER **********/
+footer {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+footer div {
+    width: 25%;
+    padding: 20px;
+    float: left;
+}
