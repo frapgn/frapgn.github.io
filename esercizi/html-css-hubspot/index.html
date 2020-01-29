@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Hubspot</title>
         <script src="https://kit.fontawesome.com/eb054ca6c4.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <link rel="shortcut icon" href="https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
@@ -23,7 +24,17 @@
                     </div>
 
                     <div class="dx-group clearfix">
-                        <i class="fas fa-search"></i>
+                        <div class="search">
+                            <i class="fas fa-search"></i>
+                            <input class="input hide-search" type="search" placeholder="search">
+                        </div>
+
+                        <script type="text/javascript">
+                            $(document).on('click', '.search', function(){
+                                $('input').addClass('show-search').removeClass('hide-search')
+                            })
+                        </script>
+
                         <a id="login-button" href="#">Log in</a>
                         <a class="orange-button" href="#">Get HubSpot free</a>
                     </div>
@@ -266,6 +277,8 @@
                         <div><img src="https://www.hubspot.com/hubfs/assets/hubspot.com/home/home_page_logos_June_2019/doordash_owler_20181011_194113_original@2x.png" alt=""></div>
                         <div><img src="https://www.hubspot.com/hubfs/assets/hubspot.com/home/home_page_logos_June_2019/g2crowd-logo@2x.png" alt=""></div>
                         <div><img src="https://www.hubspot.com/hubfs/assets/hubspot.com/home/home_page_logos_June_2019/purple-logo@2x.png" alt=""></div>
+                    </div>
+                    <div class="customers-logos clearfix">
                         <div><img src="https://www.hubspot.com/hubfs/assets/hubspot.com/home/home_page_logos_June_2019/Subaru_Logo_v2_186x63@2x.png" alt=""></div>
                         <div><img src="https://www.hubspot.com/hubfs/assets/hubspot.com/home/home_page_logos_June_2019/Wistia_logo@2x.png" alt=""></div>
                         <div><img src="https://www.hubspot.com/hubfs/assets/hubspot.com/home/home_page_logos_June_2019/Classpass-logo@2x.png" alt=""></div>
@@ -361,6 +374,7 @@
                 </div>
             </div>
         </footer>
-        <img id="fly" src="https://cdn-05.anonfile.com/lfh5C1Q1n8/e745a3f7-1580070450/fly.png" alt="">
+        <img id="fly" src="img/fly.png" alt="">
+        <img id="chat" src="img/chat-icon-centered.png" alt="">
     </body>
 </html>
