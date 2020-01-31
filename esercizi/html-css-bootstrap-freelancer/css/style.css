@@ -1,0 +1,320 @@
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+/* NAV */
+
+nav {
+    background-color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+nav a {
+    color: #fff;
+    font-weight: 700;
+}
+
+#menu {
+    float: right;
+}
+
+#menu a {
+    margin-left: 30px;
+}
+
+#menu a:hover {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+#logo a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .container {
+    line-height: 100px;
+}
+
+#logo {
+    font-size: 25px;
+    display: inline-block;
+}
+
+#menu {
+    font-size: 16px;
+    display: inline-block;
+}
+
+#hamburger {
+    float: right;
+}
+
+.hamburger .fa-bars {
+    color: #fff;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: inline;
+    padding: 15px;
+    color: #fff;
+    font-weight: 700;
+    background-color: #1abc9c;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+    #menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #logo {
+        font-size: 20px;
+    }
+}
+
+/* HEADER */
+
+header {
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 96px 0;
+}
+
+header img {
+    max-width: 240px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 65px;
+    font-weight: 700;
+}
+
+.half-divider {
+    display: inline-block;
+    background-color: #fff;
+    height: 4px;
+    max-width: 100px;
+    width: 100%;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.glyphicon-star {
+    font-size: 40px;
+}
+
+header p {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+/* PORTFOLIO */
+
+#portfolio {
+    padding: 76px 0;
+    color: #2c3e50;
+}
+
+#portfolio .half-divider {
+    background-color: #2c3e50;
+}
+
+h2 {
+    font-size: 55px;
+    font-weight: 700;
+}
+
+#portfolio img {
+    border-radius: 10px;
+
+}
+
+#portfolio .custom-divider {
+    margin-bottom: 20px;
+}
+
+#portfolio .row > div:not(:first-child) {
+    margin-bottom: 30px;
+}
+
+.box {
+    position: relative;
+}
+
+.box:hover .overlay {
+    cursor: pointer;
+    background-color: rgba(26,188,156,0.9);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.box-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.box:hover .box-icon {
+    display: block;
+}
+
+.fa-3x {
+    color: #fff;
+    font-size: 60px;
+}
+
+/* ABOUT */
+#about {
+    padding: 76px 0;
+    color: #fff;
+    background-color: #1abc9c;
+
+}
+
+#about .custom-divider {
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 20px;
+}
+
+.btn-default {
+    color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #f8f9fa;
+    padding: 20px 30px;
+}
+
+.btn-default:hover {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    color: #000;
+}
+
+.fa-download {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 550px;
+    }
+}
+
+#contact {
+    padding: 76px 0;
+    color: #2c3e50;
+}
+
+#contact .half-divider {
+    background-color: #2c3e50;
+}
+
+#contact .form-control {
+    margin-bottom: 20px;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #e9ecef;
+    box-shadow: none;
+    padding: 40px 0;
+}
+
+#contact button {
+    background-color: #1abc9c;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#contact button:hover {
+    background-color: #159a80;
+}
+
+::placeholder {
+    font-size: 25px;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 76px 0;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+footer div:last-child a {
+    color: #1abc9c;
+}
+
+footer .row div:last-child a:hover {
+    color: #117964;
+}
+
+.copyright {
+    background-color: #1a252f;
+    color: #fff;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.copyright p {
+    margin: 30px 0;
+}
+
+footer .btn-custom {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+}
+
+footer .btn-custom:not(:last-child) {
+    margin-right: 5px;
+}
+
+footer .row div:nth-child(2) a {
+    color: #fff;
+}
+
+footer .btn-custom:hover,
+footer .btn-custom:hover .fab{
+    background-color: #fff;
+    color: #212529;
+}
+
+footer .fab {
+    font-size: 25px;
+    transform: translateY(40%);
+}
