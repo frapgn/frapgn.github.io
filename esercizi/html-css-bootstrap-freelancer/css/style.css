@@ -71,26 +71,7 @@ nav .container {
     border-radius: 10px;
 }
 
-@media screen and (max-width: 991px) {
-    #menu {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    #hamburger {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    #logo {
-        font-size: 20px;
-    }
-}
-
 /* HEADER */
-
 header {
     background-color: #1abc9c;
     color: #fff;
@@ -203,6 +184,10 @@ h2 {
     font-size: 20px;
 }
 
+.btn__free-download {
+    margin-top: 30px;
+}
+
 .btn-default {
     color: #f8f9fa;
     background-color: rgba(255, 255, 255, 0);
@@ -218,12 +203,6 @@ h2 {
 
 .fa-download {
     margin-right: 10px;
-}
-
-@media screen and (max-width: 767px) {
-    .container {
-        max-width: 550px;
-    }
 }
 
 #contact {
@@ -264,6 +243,10 @@ footer {
     background-color: #2c3e50;
     color: #fff;
     padding: 76px 0;
+}
+
+footer .row > div:not(:last-child) {
+    margin-bottom: 40px;
 }
 
 footer p {
@@ -309,7 +292,7 @@ footer .row div:nth-child(2) a {
 }
 
 footer .btn-custom:hover,
-footer .btn-custom:hover .fab{
+footer .btn-custom:hover .fab {
     background-color: #fff;
     color: #212529;
 }
@@ -317,4 +300,66 @@ footer .btn-custom:hover .fab{
 footer .fab {
     font-size: 25px;
     transform: translateY(40%);
+}
+
+@media screen and (max-width: 991px) {
+    #menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 550px;
+    }
+
+    #logo {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 619px) {
+    .container {
+        /* width: 90%; */
+    }
+}
+
+@media screen and (max-width: 465px) {
+
+    .half-divider {
+        margin: 8px 0px;
+        height: 2px;
+    }
+
+    .glyphicon-star {
+        font-size: 20px;
+        margin: 0 5px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    header p {
+        margin-top: 10px;
+    }
 }
