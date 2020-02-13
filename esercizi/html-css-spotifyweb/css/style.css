@@ -34,6 +34,11 @@ body {
     width: 100vw;
 }
 
+a:active, a:focus {
+  outline: none;
+  -moz-outline-style: none;
+}
+
 /* NAVBAR */
 nav {
     background-color: #000;
