@@ -10,6 +10,10 @@
     clear: both;
 }
 
+.hidden {
+    display: none;
+}
+
 /* ****** POLIGEN ***** */
 .polygen {
     display: none;
@@ -218,7 +222,8 @@ body {
 
 #friends-list-container {
     height: calc(100% - 170px);
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #111214;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #128C7E #111214;
@@ -235,6 +240,10 @@ body {
     cursor: pointer;
 }
 
+.friend-container:hover,
+.friend-container.active {
+    background-color: #292828;
+}
 /* .friend-left {
     height: 100%;
     display: flex;
@@ -294,9 +303,36 @@ body {
 
 /* RIGHT COLUMN */
 .right-column {
+    position: relative;
     flex: 0 0 70%;
     display: flex;
     flex-direction: column;
+}
+
+.no-chat-background {
+    background-color: #111214;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-chat-background img {
+    height: 40%;
+    width: 40%;
+    object-fit: contain;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 80px;
+    color: #128c7e;
+    padding-top: 10px;
 }
 
 .active-chat-container {
@@ -395,17 +431,21 @@ body {
     display: none;
 }
 
+.msg-row {
+    
+}
+
 .row-sent {
     display: flex;
     padding-bottom: 8px;
     justify-content: flex-end;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .row-received {
     display: flex;
     padding-bottom: 8px;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .msg-container {
@@ -416,6 +456,8 @@ body {
     max-width: 500px;
     width: auto;
     border-radius: 5px;
+    position: relative;
+    /* overflow: hidden; */
 }
 
 .received {
@@ -450,6 +492,51 @@ body {
     padding: 0 5px 2px 0;
     font-size: 12px;
     color: #a6a6a6;
+}
+
+i.msg-icon-options {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 7px 10px 7px 30px;
+    /* height: 100%; */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.msg-icon-options-sent {
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(7,94,84,0.8603641285615808) 50%, rgba(7,94,84,1) 100%);
+}
+
+.msg-icon-options-received {
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(61,61,61,0.8603641285615808) 50%, rgba(61,61,61,1) 100%);
+}
+
+.msg-options-container {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    position: absolute;
+    right: 5px;
+    bottom: -130px;
+    padding: 15px 0;
+    background-color: #3d3d3d;
+    z-index: 1;
+    width: 180px;
+    border-radius: 5px;
+    color: #f1f1f1;
+}
+
+.msg-options-container div {
+    width: auto;
+    padding: 0 20px;
+}
+
+.msg-options-container div:hover {
+    background-color: #333333;
 }
 
 /* write message bar */

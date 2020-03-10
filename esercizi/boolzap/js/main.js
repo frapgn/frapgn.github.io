@@ -1,7 +1,10 @@
 var data = new Date();
 var hours = data.getHours();
 var minutes = data.getMinutes();
-
+// console.log(minutes);
+if (minutes < 10) {
+    minutes = '0' + minutes;
+}
 var currentTime = hours + ':' + minutes;
 // console.log(currentTime);
 
@@ -12,21 +15,38 @@ $('.sent-msg').click(function() {
 });
 
 // Azione invio tramite tasto Enter
-$('#write-msg').keydown(function(event) {
-    switch (event.key) {
-        case 'Enter':
-            sentMessage();
-            randomReply();
-            $('.sent-msg').hide();
-            $('.record-audio').show();
-            break;
-        default:
-
+$(document).on('keypress', '.active-chat-container.visible .write-msg' ,function() {
+    if(event.key == 'Enter') {
+        sentMessage();
+        randomReply();
+        $('.sent-msg').hide();
+        $('.record-audio').show();
     }
 });
 
+// $('.write-msg').keypress(function(event) {         // alla pressione del tasto enter
+//      if(event.key == 'Enter') {
+//          sentMessage();
+//          randomReply();
+//          $('.sent-msg').hide();
+//          $('.record-audio').show();
+//      }
+// });
+// $('.write-msg').keydown(function(event) {
+//     switch (event.key) {
+//         case 'Enter':
+//             sentMessage();
+//             randomReply();
+//             $('.sent-msg').hide();
+//             $('.record-audio').show();
+//             break;
+//         default:
+//
+//     }
+// });
+
 // Focus sull'input Scrivi un messaggio --> Scompare icona microfono e compare icona invio
-// $('#write-msg').focus(function() {
+// $('.write-msg').focus(function() {
 //     $('.record-audio').hide();
 //     $('.sent-msg').show();
 // }).blur(function() {
@@ -35,7 +55,7 @@ $('#write-msg').keydown(function(event) {
 // });
 
 // Controllo se c'è del testo nell'input, lo spazio non viene considerato
-$('#write-msg').keyup(function(event){
+$(document).on('keyup', '.active-chat-container.visible .write-msg' ,function() {
     if($(this).val().trim() != '') {
         $('.record-audio').hide();
         $('.sent-msg').show();
@@ -44,6 +64,16 @@ $('#write-msg').keyup(function(event){
         $('.record-audio').show();
     }
 });
+
+// $('.active-chat-container.visible .write-msg').keyup(function(event){
+//     if($(this).val().trim() != '') {
+//         $('.record-audio').hide();
+//         $('.sent-msg').show();
+//     } else {
+//         $('.sent-msg').hide();
+//         $('.record-audio').show();
+//     }
+// });
 
 // Filtro ricerca amici
 $('#friends-search-input').keyup(function(event){
@@ -57,6 +87,84 @@ $('#friends-search-input').keyup(function(event){
         }
     });
 });
+
+// Collego lista amici alla chat
+$(document).on('click', '.friend-container', function(){
+    if (!$(this).hasClass('active')) {
+        $('.friend-container').removeClass('active');
+        $(this).addClass('active');
+    }
+    var friendId = $(this).data('friendId');
+    console.log(friendId);
+    $('.active-chat-container').each(function(){
+        var chatId = $(this).data('chatId');
+        console.log(chatId);
+        if ((friendId == chatId) && $(this).hasClass('hidden')) {
+            $('.active-chat-container').removeClass('visible');
+            $('.active-chat-container').addClass('hidden');
+            $(this).removeClass('hidden');
+            $(this).addClass('visible');
+        }
+    });
+    if($('.active-chat-container.visible .write-msg').val().trim() != '') {
+        $('.record-audio').hide();
+        $('.sent-msg').show();
+    } else {
+        $('.sent-msg').hide();
+        $('.record-audio').show();
+    }
+});
+
+// $('.friend-container').click(function(){
+//     if (!$(this).hasClass('active')) {
+//         $('.friend-container').removeClass('active');
+//         $(this).addClass('active');
+//     }
+//     var friendId = $(this).data('friendId');
+//     console.log(friendId);
+//     $('.active-chat-container').each(function(){
+//         var chatId = $(this).data('chatId');
+//         console.log(chatId);
+//         if ((friendId == chatId) && $(this).hasClass('hidden')) {
+//             $('.active-chat-container').removeClass('visible');
+//             $('.active-chat-container').addClass('hidden');
+//             $(this).removeClass('hidden');
+//             $(this).addClass('visible');
+//         }
+//     });
+//     if($('.active-chat-container.visible .write-msg').val().trim() != '') {
+//         $('.record-audio').hide();
+//         $('.sent-msg').show();
+//     } else {
+//         $('.sent-msg').hide();
+//         $('.record-audio').show();
+//     }
+// });
+
+// Menu a tendina opzioni messaggio
+$(document).on('mouseenter', '.msg-container', function(){
+    $(this).find('.msg-icon-options').removeClass('hidden');
+});
+
+$(document).on('mouseleave', '.msg-container', function(){
+    if ($(this).find('.msg-options-container').hasClass('hidden')) {
+        $(this).find('.msg-icon-options').addClass('hidden');
+    }
+});
+
+$(document).on('click', '.msg-icon-options', function(){
+    $(this).find('.msg-options-container').toggleClass('hidden');
+});
+// $('.msg-container').mouseenter(function(){
+//     $(this).find('.msg-icon-options').removeClass('hidden');
+// }).mouseleave(function(){
+//     $(this).find('.msg-icon-options').addClass('hidden');
+// });
+
+$(document).on('click', '.delete-msg', function(){
+    $(this).parentsUntil('.history-messages-container').remove('.msg-row');
+});
+
 // FUNZIONI /////////////////////////////////////////////////////
 // Scroll
 function scroll() {
@@ -66,20 +174,16 @@ function scroll() {
 
 // Invio messaggio
 function sentMessage() {
-    var writeMsg = $('#write-msg').val();
+    var writeMsg = $('.active-chat-container.visible .write-msg').val();
     // console.log(writeMsg);
-    $('#write-msg').val('');
+    $('.active-chat-container.visible .write-msg').val('');
     var clonedSent = $('.templates-msgs .row-sent').clone();
     // console.log(clonedSent);
     $(clonedSent).find('.sent-text').text(writeMsg);
     $(clonedSent).find('.sent-time').text(currentTime);
-    $('.history-messages-container').append(clonedSent);
+    $('.active-chat-container.visible .history-messages-container').append(clonedSent);
     scroll();
 }
-
-// POLIGEN //
-var poligen = $('.polygenOutput').text();
-// console.log(poligen);
 
 // Messaggio di risposta random
 function randomReply() {
@@ -88,7 +192,11 @@ function randomReply() {
         console.log(clonedReceived);
         $(clonedReceived).find('.received-text').text(poligen);
         $(clonedReceived).find('.received-time').text(currentTime);
-        $('.history-messages-container').append(clonedReceived);
+        $('.active-chat-container.visible .history-messages-container').append(clonedReceived);
         scroll();
     }, 1000);
 }
+
+// POLIGEN //
+var poligen = $('.polygenOutput').text();
+// console.log(poligen);
