@@ -1,0 +1,757 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: rgba(3,27,78,.7);
+    padding-top: 63px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 60px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #031b4e;
+    margin: 0 0 16px;
+}
+
+h3 {
+    color: #031b4e;
+    font-size: 20px;
+}
+
+.ms-dark-text {
+    color: #031b4e;
+}
+
+.ms--light-text {
+    color: #fff;
+}
+
+.ms--md-text {
+    font-size: 21px;
+}
+
+.ms--sm-text {
+    font-size: 17px;
+}
+
+.ms--xs-text {
+    font-size: 13px;
+}
+
+.ms--bg-grey {
+    background-color: #f3f5f9;
+}
+
+.ms--bottom-space-40 {
+    margin-bottom: 40px;
+}
+
+.ms--bottom-space-20 {
+    margin-bottom: 20px;
+}
+
+.ms--bottom-space-0 {
+    margin-bottom: 0px;
+}
+
+.ms--section-space {
+    padding: 90px 0;
+}
+
+a {
+    color: #0069ff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+a:hover {
+    color: #005fe6;
+    text-decoration: none;
+}
+
+.ms--link-arrow::after {
+    font-size: 10px;
+    padding: 0 10px 0 5px;
+    position: relative;
+    bottom: 1px;
+}
+
+cite {
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(3,27,78,.5);
+    letter-spacing: 0.5px;
+}
+
+ol {
+    display: block;
+    text-align: center;
+    padding-left: 0;
+}
+
+ol li {
+    display: inline-block;
+    border: 2px solid #0069ff;
+    border-radius: 50px;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+}
+
+ol li:hover {
+    background-color: rgba(0, 105, 255, 0.45);
+    cursor: pointer;
+}
+
+ol li:nth-child(2) {
+    background-color: #0069ff;
+}
+
+/********** NAVBAR **********/
+.navbar {
+    min-height: 63px;
+    box-shadow: 0 2px 4px rgba(3,27,78,.1);
+}
+
+.navbar-default {
+    background-color: #fff;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.navbar-default .navbar-toggle {
+    margin-top: 14px;
+}
+
+.navbar-brand {
+    height: 63px;
+}
+
+.navbar-brand svg {
+    fill: #0069ff;
+}
+
+.navbar-nav > li > a {
+    padding-top: 23px;
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    background-color: #fff;
+    color: #0069ff;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #031b4e;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #0069ff;
+}
+
+/* dropdown icon*/
+.fa-angle-down {
+    position: relative;
+    top: 1px;
+}
+/* end */
+
+.navbar-nav.navbar-right > li > a {
+    color: #0069ff;
+    font-weight: 700;
+    font-size: 17px;
+    border: 1px solid #0069ff;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 5px;
+    margin: 11.5px;
+}
+
+.navbar-nav.navbar-right > li > a:hover {
+    color: #fff;
+    background-color: #0069ff;
+}
+
+
+/********** HEADER **********/
+header {
+    background-image: url('../img/background-header.svg');
+    background-position: center;
+    background-size: cover;
+    padding: 90px 0 70px;
+}
+
+header .ms--light-text p {
+    font-size: 24px;
+    opacity: .8;
+}
+
+.ms--box-h1,
+.ms--box-form {
+    padding: 25px;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+form h2 {
+    font-size: 30px;
+    margin: 15px 0 32px;
+}
+
+label {
+    display: none;
+}
+
+.form-control {
+    height: 48px;
+}
+
+.ms--btn-create-account {
+    background-color: #0069ff;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+}
+
+.ms--btn-create-account:hover {
+    background-color: #1633ff;
+    color: #fff;
+}
+
+.ms--btn-social-access {
+    position: relative;
+    background-color: #f2f8ff;
+    border: 1px solid #c2dbff;
+    color: #000;
+    font-weight: 700;
+}
+
+.ms--btn-social-access:hover {
+    background-color: #d5e4f7;
+    border-color: #aacbf9;
+}
+
+.ms--btn-social-access svg {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.ms--divider-box {
+    margin: 16px 0;
+}
+
+.ms--divider {
+    border-top: 1px solid #e5e8ed;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.ms--ToS {
+    margin-top: 30px;
+}
+
+.ms--ToS p {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.ms--ToS a {
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+
+/********** CUSTOMERS LOGOS **********/
+#customers-logos {
+    padding: 64px 0;
+}
+
+#customers-logos h2 {
+    font-size: 15px;
+    opacity: 0.5;
+    margin-bottom: 16px;
+}
+
+.customers-logos > div:not(:last-child) > img {
+    height: 77px;
+    object-fit: contain;
+}
+
+.splunk {
+    height: 37px;
+    margin: 20px auto;
+    object-fit: contain;
+}
+
+.ms--cta-customers-logos {
+    margin-top: 16px;
+}
+
+
+/********** SERVICES CONFIGURATION **********/
+#services-configuration {
+    padding: 90px 0 70px;
+}
+
+.services-configuration > .row:first-child {
+    margin-bottom: 40px;
+}
+
+.ms--col-icons > .row > div {
+    margin-bottom: 40px;
+}
+
+/* .ms--col-icons > .row {
+    margin-bottom: 40px;
+} */
+
+/* vertical list */
+.ms--vertical-list li {
+    padding: 16px 0 16px 30px;
+}
+
+.ms--vertical-list li:first-child {
+    border-color: #0069ff;
+}
+
+.ms--vertical-list a {
+    color: rgba(3,27,78,.5);
+}
+
+.ms--vertical-list a:hover {
+    color: #0069ff;
+    text-decoration: none;
+}
+
+/********** DESIGNED FOR DEVELOPERS **********/
+#designed-for-developers img {
+    border-radius: 5px;
+}
+
+
+/* test icon */
+.ms--fw-icon::after {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+.ms--fa-chevron-right::after {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    content: "\f054";
+}
+
+.ms--fa-chevron-left::before {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    content: "\f053";
+}
+
+#designed-for-developers .ms--fa-chevron-right::after {
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+#designed-for-developers .ms--fa-chevron-left::before {
+    position: absolute;
+    top: 50%;
+    right: 105%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+/* test icon */
+
+
+/********** BUILT FOR BUSINES **********/
+.www-Icon--xlarge {
+    height: 40px;
+    width: 40px;
+}
+
+/********** DATA CENTERS **********/
+#data-centers {
+    background-color: #031b4e;
+    background-image: url('https://www.digitalocean.com/assets/media/homepage/data-center-map-20321538.svg');
+}
+
+#data-centers li {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 11px;
+    border-bottom: 1px solid hsla(0,0%,100%,.2);
+}
+
+
+.ms--server-id {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-right: 10%;
+}
+
+.ms--server-id.ms--ugly-patch {
+    padding-right: 8%;
+}
+
+.ms--location {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.ms--test-speed-link {
+    float: right;
+}
+
+#data-centers a {
+    color: #00d7d2;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#data-centers .ms--fa-chevron-right::after {
+    color: #00d7d2;
+    font-size: 10px;
+    padding: 0 10px 0 7px;
+    position: relative;
+    bottom: 1px;
+}
+}
+
+/********** TESTIMONIALS **********/
+
+#testimonials .ms--big-link {
+    font-size: 21px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+#testimonials {
+    background-color: #f3f5f9;
+}
+
+.ms--slide {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 25px;
+    border: 1px solid #e5e8ed;
+}
+
+.ms--slide img {
+    max-width: 175px;
+}
+
+.ms--slide p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.ms--slide-arrows.ms--fa-chevron-right::after {
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+.ms--slide-arrows.ms--fa-chevron-left::before {
+    position: absolute;
+    top: 50%;
+    right: 105%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+
+/********** GET STARTED NOW **********/
+#get-started-now {
+    padding: 72px 0;
+    background-image: url('https://www.digitalocean.com/assets/media/homepage/bg-home-1-d54581d7.jpg');
+    background-position: 10% bottom;
+}
+
+#get-started-now p {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.ms--btn-footer {
+    background-color: #fff;
+    color: #0069ff;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.ms--btn-footer:hover {
+    color: #0069ff;
+    opacity: .7;
+}
+
+
+/********** FOOTER **********/
+
+footer {
+    background-color: #010e28;
+    padding: 96px 0 96px;
+}
+
+dt {
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+dd a {
+    color: hsla(0,0%,100%,.5);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 27px;
+}
+
+dd a:hover {
+    color: #fff;
+}
+
+
+/* sub footer */
+.sub-footer {
+    margin-top: 64px;
+    border-top: 1px solid #343e53;
+}
+
+.ms--copyright {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.ms--copyright p {
+    color: hsla(0,0%,100%,.5);
+}
+
+.ms--social-icons {
+    text-align: center;
+    margin-top: 32px;
+}
+
+/* align svg + text */
+footer .ms--text-beside-svg {
+    margin: 0 0 0 17px;
+}
+
+footer .ms--svg-icon,
+footer .ms--text-beside-svg {
+    vertical-align: middle;
+    display: inline-block;
+}
+/* end */
+
+.ms--social-icons ul {
+    display: inline;
+    padding-left: 0;
+}
+
+.ms--social-icons li {
+    display: inline-block;
+}
+
+.ms--social-icons li {
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.ms--social-icons .fab {
+    font-size: 20px;
+}
+
+.ms--social-icons a {
+    color: #808794;
+}
+
+.ms--social-icons a:hover {
+    color: #fff;
+}
+
+/********** MEDIA QUERIES **********/
+@media screen and (min-width: 1200px) {
+
+    .ms--col-h1 { /* non mi piaceva la regola del sito originale */
+        top: 100px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .ms--copyright {
+        text-align: left;
+    }
+
+    .ms--social-icons {
+        text-align: right;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .ms--vertical-list li {
+        border-left: 2px solid #e5e8ed;
+    }
+
+    .ms--vertical-list li:hover {
+        border-left: 2px solid #0069ff;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+
+    .ms--no-margin-bottom {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* orizontal li */
+    .ms--vertical-list ul {
+        display: block;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .ms--vertical-list ul li {
+        display: inline-block;
+    }
+
+    .ms--vertical-list li {
+        padding: 0 2px 2px;
+        margin: 0 5px;
+        border-bottom: 2px solid #e5e8ed;
+    }
+
+    .ms--vertical-list li:hover {
+        border-bottom: 2px solid #0069ff;
+    }
+
+    .ms--vertical-list a {
+        font-size: 17px;
+    }
+
+    .ms--slide-arrows.ms--fa-chevron-left::before,
+    .ms--slide-arrows.ms--fa-chevron-right::after,
+    .ms--slide-arrows.ms--fa-chevron-left::before,
+    .ms--slide-arrows.ms--fa-chevron-right::after {
+        display: none;
+    }
+
+    /* vertical align svg icons + h3 */
+    #services-configuration .ms--h3-icon {
+        margin: 0 0 0 10px;
+    }
+
+    #services-configuration .ms--icon,
+    #services-configuration .ms--h3-icon {
+        vertical-align: middle;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+    .ms--col-xxs-12 {
+        width: calc((100% / 12) * 12);
+    }
+
+    /* vertical align svg icons + h3 */
+    #built-for-business .ms--h3-icon {
+        margin: 0 0 0 10px;
+    }
+
+    #built-for-business .ms--icon,
+    #built-for-business .ms--h3-icon {
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    .ms--box-h1,
+    .ms--box-form {
+        padding: 0 0 20px 0;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .ms--btn-social-access {
+        /* padding-right: 1px; */
+        padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .ms--btn-social-access {
+        font-size: 15px;
+    }
+
+    .ms--btn-social-access svg {
+        position: absolute;
+        left: 10%;
+        height: 15px;
+        width: 15px;
+    }
+
+    .ms--vertical-list li {
+        margin: 0;
+    }
+
+@media screen and (max-width: 320px) {
+
+    .ms--btn-social-access  {
+        padding: 5px;
+    }
+
+    .ms--btn-social-access svg {
+        display: none;
+    }
+
+    .ms--btn-create-account {
+        font-size: 16px;
+    }
+}
+
+/*
+
+
+
+ ----
+
+
+
+*/
