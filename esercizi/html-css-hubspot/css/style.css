@@ -158,18 +158,6 @@ button:hover {
     font-size: 12px;
 }
 
-.search {
-    display: inline-block;
-}
-
-.hide-search {
-    display: none;
-}
-
-.show-search {
-    display: inline;
-}
-
 .fa-search {
     margin-right: 15px;
     color: #00a4bd;
@@ -289,6 +277,15 @@ button:hover {
     background-position: right top;
     background-size: 50%;
     padding-bottom: 200px;
+    position: relative;
+    border-bottom: 3px solid #345667;
+    min-height: 800px;
+}
+
+.jumbotron img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .cta-jumbotron {

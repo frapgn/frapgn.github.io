@@ -37,20 +37,23 @@ body {
 }
 
 .container {
+    padding: 30px;
     height: 100%;
     overflow: hidden;
 }
 
 .shell {
-    margin: 30px;
+    height: 100%;
     padding: 30px;
     border: 2px solid #00ff00;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
 @media screen and (max-width: 420px) {
+    .container {
+        padding: 25px 15px;
+    }
     .shell {
-        margin: 25px 15px;
         padding: 15px;
     }
 }
